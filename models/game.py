@@ -1,17 +1,21 @@
 class Game():
 
-    def rps(self, player1, player2):
+    def __init__(self, player1, player2):
+        self.player1 = player1
+        self.player2 = player2
+
+    def rps(self):
         valid_choices = ["Rock", "Paper", "Scissors"]
 
-        if ((player1.choice not in valid_choices) or (player2.choice not in valid_choices)):
+        if ((self.player1.choice not in valid_choices) or (self.player2.choice not in valid_choices)):
             return "Invalid choice"
-        if player1.choice == player2.choice:
+        if self.player1.choice == self.player2.choice:
             return None
-        if (player1.choice == "Rock" and (player2.choice == "Scissors")):
-            return player1
-        elif (player1.choice == "Paper" and (player2.choice == "Rock")):
-            return player1
-        elif (player1.choice == "Scissors" and (player2.choice == "Paper")):
-            return player1
+        if (self.player1.choice == "Rock" and (self.player2.choice == "Scissors")):
+            return self.player1
+        elif (self.player1.choice == "Paper" and (self.player2.choice == "Rock")):
+            return self.player1
+        elif (self.player1.choice == "Scissors" and (self.player2.choice == "Paper")):
+            return self.player1
         else:
-            return player2
+            return self.player2
