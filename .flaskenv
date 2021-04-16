@@ -1,2 +1,2 @@
-FLASK_APP = rps.py
+FLASK_APP = app.py
 FLASK_ENV = development
