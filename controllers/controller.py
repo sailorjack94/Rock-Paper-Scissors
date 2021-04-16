@@ -12,6 +12,6 @@ def rps_game(choice1, choice2):
     player1 = Player("Niall", choice1)
     player2 = Player("Bob", choice2)
     game = Game(player1, player2)
-    win = game.rps()
-    return win
+    win = game.run_rps()
+    return f'{win.name} wins by playing {win.choice}!'
     
