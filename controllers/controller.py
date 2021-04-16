@@ -3,7 +3,7 @@ from app import app
 from models.game import Game
 from models.player import Player
 
-@app.route('/')
+@app.route('/welcome')
 def index():
     return(render_template('index.html'))
 
@@ -13,5 +13,6 @@ def rps_game(choice1, choice2):
     player2 = Player("Bob", choice2)
     game = Game(player1, player2)
     win = game.run_rps()
-    return f'{win.name} wins by playing {win.choice}!'
-    
+    lose = game.rps_loser()
+    # return f'{win.name} wins by playing {win.choice}!'
+    return (render_template('result.html', winner = win, title = 'And the winner is...', loser = lose))
