@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Dela Gothic One', cursive;
+    color: blue;
+    text-align: center;
+    background-color:gainsboro;
+}
+
+body > div {
+    color: black;
+    text-align: center;
+    background-color: gainsboro;
+}
+
+body > header {
+    padding: 5%;
+    text-shadow: 2px 2px 1px black;
+}

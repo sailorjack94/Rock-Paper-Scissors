@@ -14,5 +14,7 @@ def rps_game(choice1, choice2):
     game = Game(player1, player2)
     win = game.run_rps()
     lose = game.rps_loser()
+    if (win =='draw' or lose == "draw"):
+        return (render_template('draw.html'))
     # return f'{win.name} wins by playing {win.choice}!'
     return (render_template('result.html', winner = win, title = 'And the winner is...', loser = lose))
