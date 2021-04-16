@@ -9,8 +9,8 @@ def index():
 
 @app.route('/<choice1>/<choice2>')
 def rps_game(choice1, choice2):
-    player1 = Player("Niall", choice1)
-    player2 = Player("Bob", choice2)
+    player1 = Player("Player 1", choice1)
+    player2 = Player("Player 2", choice2)
     game = Game(player1, player2)
     win = game.run_rps()
     lose = game.rps_loser()
