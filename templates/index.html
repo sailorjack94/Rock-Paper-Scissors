@@ -4,16 +4,36 @@
 
 <body>
     <div>
-        <br>
-        <br>
-        <p>This is a simple URL powered game. Simply enter your R/P/S selections in the URL bar as below: <br><br>
-
-            <b>'/rock/paper'</b> - Player 1 has selected Rock, Player 2 has selected Paper. <br>
-            <b>'/paper/paper'</b> - Both Player 1 and 2 have selected Paper. <br><br>
-
-            To play, type in your choices where welcome is currently located in the URL and press Enter!
+        <p>Let's play Rock, Paper, Scissors! <br><br>
+            Enter your names below, make your choices and click 'Let's Play!'<br><br>
+            Good Luck! <br>
         </p>
     </div>
+    <hr>
+    <form action="/welcome" method="POST">
+        <label for="player1_name">Player 1 Name:</label>
+        <input type="text" name="player1_name" id="player1_name">
+        <label for="player1_choice">Player 1 Choice:</label>
+        <select name="player1_choice" id="player1_choice">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+        </select>
+        <label for="player2_name">Player 2 Name:</label>
+        <input type="text" name="player2_name" id="player2_name">
+        <label for="player2_choice">Player 2 Choice:</label>
+        <select name="player2_choice" id="player2_choice">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+        </select>
+        <br>
+        <input type="submit" value="Let's Play!" id='submit'>
+        <br>
+        <br>
+        <br>
+        <br>
+    </form>
 
 </body>
 

@@ -19,3 +19,12 @@ body > header {
     padding: 5%;
     text-shadow: 2px 2px 1px black;
 }
+
+body > form {
+    display: flex;
+    flex-direction: column;
+    column-width: 250px;
+    justify-content: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
