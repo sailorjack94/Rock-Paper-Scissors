@@ -6,13 +6,15 @@
     <div>
         <p>Let's play Rock, Paper, Scissors! <br><br>
             Enter your names below, make your choices and click 'Let's Play!'<br><br>
-            Good Luck! <br>
+            Or <br><br>
+            <a href="/play">Play the Computer!</a> <br><br>
+
         </p>
     </div>
     <hr>
     <form action="/welcome" method="POST">
         <label for="player1_name">Player 1 Name:</label>
-        <input type="text" name="player1_name" id="player1_name">
+        <input type="text" name="player1_name" id="player1_name" style="text-align:center;">
         <label for="player1_choice">Player 1 Choice:</label>
         <select name="player1_choice" id="player1_choice">
             <option value="rock">Rock</option>
@@ -20,12 +22,12 @@
             <option value="scissors">Scissors</option>
         </select>
         <label for="player2_name">Player 2 Name:</label>
-        <input type="text" name="player2_name" id="player2_name">
+        <input type="text" name="player2_name" id="player2_name" style="text-align:center;">
         <label for="player2_choice">Player 2 Choice:</label>
-        <select name="player2_choice" id="player2_choice">
-            <option value="rock">Rock</option>
-            <option value="paper">Paper</option>
-            <option value="scissors">Scissors</option>
+        <select name="player2_choice" id="player2_choice" style="text-align:center;">
+            <option value="rock" style="text-align:center;">Rock</option>
+            <option value="paper" style="text-align:center;">Paper</option>
+            <option value="scissors"style="text-align:center;">Scissors</option>
         </select>
         <br>
         <input type="submit" value="Let's Play!" id='submit'>

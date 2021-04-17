@@ -1,16 +1,36 @@
 from flask import render_template, request, redirect, url_for
 from app import app
 from models.game import *
-from models.player import *
+from models.player import Player
+import random
 
 # Redirect from default landing page to '/welcome' where the game starts.
-@app.route('/')
-def home():
-    return redirect(url_for('index'))
+# @app.route('/')
+# def home():
+#     return redirect(url_for('index'))
 
 @app.route('/welcome')
 def index():
     return(render_template('index.html'))
+
+@app.route('/play')
+def play():
+    return render_template('play.html')
+
+@app.route('/play', methods = ['POST', 'GET'])
+def pvc_game():
+    valid_choices = ['rock', 'paper', 'scissors']
+    computer_player = Player('R3D4', valid_choices[random.randint(0,2)])
+    new_p1_name = request.form['player1_name']
+    new_p1_choice = request.form['player1_choice']
+    player1 = Player(new_p1_name , new_p1_choice)
+    player2 = computer_player
+    game = Game(player1, computer_player)
+    win = game.run_rps()
+    lose = game.rps_loser()
+    if (win =='draw' or lose == "draw"):
+        return (render_template('draw.html'))
+    return(render_template('result.html', winner = win, loser = lose))
 
 # Both game methods still playable.
 
